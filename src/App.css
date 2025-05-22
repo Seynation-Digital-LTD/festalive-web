@@ -32,17 +32,16 @@
   background-image: url(./assets/hero.png);
   background-size: cover;
   background-position: center;
-  opacity: 0.36;
+  opacity: 0.29;
   z-index: 0;
 }
 
 .logo {
-  width: 450px;
+  width: 350px;
 }
 
 .hero-content {
   font-family: "Poppins", sans-serif;
-
   text-align: center;
   position: relative;
   z-index: 1;
@@ -53,7 +52,7 @@
 }
 
 .p-one {
-  font-size: 19px;
+  font-size: 25px;
 }
 
 .p-two {
@@ -65,8 +64,59 @@
   height: 50px;
   background-color: #ff6f00;
   color: white;
-  stroke: #994300;
-  align-items: center;
-  justify-content: center;
+  border: 2px solid #bf5300;
+  font-size: 12px;
+  font-weight: lighter;
+  text-align: center;
   border-radius: 5px;
+  padding: 0 10px;
+}
+
+.input::placeholder {
+  color: #d7d7d7;
+  opacity: 1;
+}
+
+.inputting {
+  gap: 5px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.submit-button {
+  padding: 13px 10px;
+  border: #d7d7d7;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 250px;
+  }
+  .p-one {
+    font-size: 17px;
+  }
+
+  .input {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .p-one {
+    font-size: 18px;
+  }
+
+  .p-two {
+    font-size: 11px;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .input {
+    font-size: 12px;
+    height: 42px;
+  }
 }

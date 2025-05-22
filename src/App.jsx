@@ -17,8 +17,11 @@ function App() {
             and <b>hire creators.</b>
           </p>
           <p className="p-two">Be among the first to acces it.</p>
+          <div className="inputting">
           <div className="email-input">
-            <input type="email" className="input" placeholder="Please, give us your email"></input>
+            <input type="email" className="input" placeholder="Give us your email, Press ENTER to Send."></input>
+          </div>
+          <button className="submit-button">Submit</button>
           </div>
         </div>
       </div>
