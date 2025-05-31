@@ -89,7 +89,10 @@
   padding: 13px 10px;
   border: #d7d7d7;
 }
-
+.submit-button:hover{
+  background-color: #ff6f00;
+  
+}
 @media screen and (max-width: 768px) {
   .logo {
     width: 250px;
@@ -100,6 +103,14 @@
 
   .input {
     width: 280px;
+  }
+
+  .inputting{
+    flex-direction: column;
+  }
+
+  .submit-button{
+    width: 300px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -118,5 +129,13 @@
   .input {
     font-size: 12px;
     height: 42px;
+  }
+
+  .inputting{
+    flex-direction: column;
+  }
+
+  .submit-button{
+    width: 300px;
   }
 }

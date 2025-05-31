@@ -13,13 +13,13 @@ function App() {
             className="logo"
           />
           <p className="p-one">
-            One platform to <b>discover events</b>, <br /> <b>book tickets </b>
+            One platform to <b>discover events</b>, <br/> <b>book tickets </b>
             and <b>hire creators.</b>
           </p>
           <p className="p-two">Be among the first to acces it.</p>
           <div className="inputting">
           <div className="email-input">
-            <input type="email" className="input" placeholder="Give us your email, Press ENTER to Send."></input>
+            <input type="email" className="input" placeholder="Please Give us your email"></input>
           </div>
           <button className="submit-button">Submit</button>
           </div>
@@ -28,5 +28,4 @@ function App() {
     </>
   );
 }
-
 export default App;
