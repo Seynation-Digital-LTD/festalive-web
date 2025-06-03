@@ -1,31 +1,19 @@
-import { useState } from "react";
-
-import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Components/Home/Home";
+import Email from "./Components/Email/Email";
+import "./App.css"
 
 function App() {
   return (
-    <>
-      <div className="hero">
-        <div className="hero-content">
-          <img
-            src="/assets/festalivelogowhite.png"
-            alt="Festalive"
-            className="logo"
-          />
-          <p className="p-one">
-            One platform to <b>discover events</b>, <br/> <b>book tickets </b>
-            and <b>hire creators.</b>
-          </p>
-          <p className="p-two">Be among the first to acces it.</p>
-          <div className="inputting">
-          <div className="email-input">
-            <input type="email" className="input" placeholder="Please Give us your email"></input>
-          </div>
-          <button className="submit-button">Submit</button>
-          </div>
-        </div>
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/email-listing" element={<Email />} />
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
+
 export default App;
