@@ -1,0 +1,233 @@
+/* App.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#root {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+  object-position: center;
+   background-image: linear-gradient(
+        rgba(0, 0, 0, 0.727),
+        rgba(187, 84, 0, 0.853),
+        rgb(10, 10, 10)
+      ),
+      url(/assets/hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   animation: gradientAnimation 10s ease-in-out infinite alternate;
+}
+
+ 
+.logo {
+  width: 350px;
+}
+
+.hero-content {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-one {
+  font-size: 25px;
+}
+
+.p-two {
+  font-size: 12px;
+}
+
+.input {
+  width: 320px;
+  height: 50px;
+  background-color: #ff6f00;
+  color: white;
+  border: 2px solid #bf5300;
+  font-size: 12px;
+  font-weight: lighter;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0 10px;
+  
+}
+
+.input::placeholder {
+  color: #d7d7d7;
+  opacity: 1;
+ 
+}
+
+input:focus{
+border: none;
+outline: none;
+}
+
+.inputting {
+  gap: 5px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.submit-button {
+  padding: 13px 10px;
+  border: #d7d7d7;
+
+}
+.submit-button:hover{
+  background-color: #ff6f00;
+
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 450px;
+  }
+  .p-one {
+    font-size: 17px;
+  }
+
+  .input {
+    width: 280px;
+  }
+
+  .inputting{
+    flex-direction: column;
+  }
+
+  .submit-button{
+    width: 300px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .p-one {
+    font-size: 18px;
+  }
+
+  .p-two {
+    font-size: 11px;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .input {
+    font-size: 12px;
+    height: 42px;
+  }
+
+  .inputting{
+    flex-direction: column;
+  }
+
+  .submit-button{
+    width: 300px;
+  }
+}
+
+
+
+.crc {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  /* transform: rotate(90deg); */
+  /* border-radius: 53% 47% 46% 54% / 39% 39% 61% 61%; */
+  /* border-radius:64% 36% 39% 61% / 52% 54% 46% 48%  ; */
+  background: linear-gradient(#ffffff0b, #bd06ff09);
+  transform-style: preserve-3d;
+  transform: translateZ(90px);
+  backdrop-filter: blur(3px);
+  animation: animate_01 12s linear infinite;
+  pointer-events: none;
+  border-left: 2px solid rgb(240, 242, 243);
+  border-right: 1px solid rgb(230, 255, 252);
+  /* border-radius: 63% 37% 44% 56% / 49% 56% 44% 51%; */
+  /* background: rgb(163, 14, 255); */
+  border-radius: 50%;
+}
+
+
+@keyframes animate_01 {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.thedot{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  top: -1px;
+  right: 0px
+}
+
+
+.staaa {
+  color: rgb(0, 0, 0);
+  font-size: 0.8em;
+  border: 1px solid rgb(255, 255, 255);
+  width: 90%;
+  padding-top: 23px;
+  min-height: 95px;
+  border-radius: 5px;
+  background: rgb(135, 1, 1);
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  justify-content: center;
+  position: absolute;
+  z-index: 1000;
+  top: 40%;
+
+  flex-direction: column;
+  gap: 23px;
+  backdrop-filter: blur(8px);
+}
+
+.status{
+  background-color: red;
+  border-radius: 20px;
+  width: 30%;
+  font-size: 0.6em;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
