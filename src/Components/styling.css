@@ -1031,7 +1031,7 @@
   margin: 22px;
   display: flex;
   gap: 23px;
-  background-color: rgba(0, 0, 0, 0.188);
+  background-color: rgba(0, 0, 0, 0);
   margin-top: -2px;
   width: 100%;
   backdrop-filter: blur(6px);
@@ -3192,7 +3192,7 @@ input {
     margin: 2px;
     display: flex;
     gap: 23px;
-    background-color: rgba(0, 0, 0, 0.188);
+    background-color: rgba(0, 0, 0, 0);
     margin-top: -2px;
     width: 100%;
     position: relative;
@@ -3204,6 +3204,8 @@ input {
     flex-direction: column;
     padding-bottom: 23px;
     backdrop-filter: blur(5px);
+    margin-left: 23px;
+    margin-right: 23px;
   }
 
   .dashoos {

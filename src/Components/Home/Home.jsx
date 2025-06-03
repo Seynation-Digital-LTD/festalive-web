@@ -1,5 +1,5 @@
 import { useState } from "react";
- 
+
 import { initializeApp } from "@firebase/app";
 import { getDatabase } from "firebase/database";
 import { ref, set, get, update, remove, child } from "firebase/database";
@@ -48,54 +48,53 @@ function Home() {
     return parts.join("");
   }
 
-  
   const submit = (e) => {
- 
     const rnd = generateSeparatedString();
 
-
-
-    if ( email) {
+    if (email) {
       update(ref(db, `festalive/${rnd}`), {
         email: email,
       }).then(() => {
         setStatus("Subscribed successfully!");
-        setEmail("")
+        setEmail("");
       });
     } else {
-   
       setStatus("Enter your email!");
-    
     }
   };
   return (
     <>
       <div className="hero">
         <div className="hero-content">
-        <div className="crc">
-          <div className="thedot"></div>
-        </div> 
+          <div className="crc">
+            <div className="thedot"></div>
+          </div>
           <img
             src="/assets/festalivelogowhite.png"
             alt="Festalive"
             className="logo"
           />
           <p className="p-one">
-            One platform to <b>discover events</b>, <br/> <b>book tickets </b>
+            One platform to <b>discover events</b>, <br /> <b>book tickets </b>
             and <b>hire creators.</b>
           </p>
           <p className="p-two">Be among the first to access it.</p>
-          {status&&<div className="status">{status}</div>}
+          {status && <div className="status">{status}</div>}
           <div className="inputting">
-          <div className="email-input">
-            <input type="email" className="input" placeholder="Please Give us your email" 
-            onChange={(e) => setEmail(e.target.value)}
-            ></input>
-          </div>
-          <button className="submit-button" onClick={submit}>Submit</button>
+            <div className="email-input">
+              <input
+                type="email"
+                className="input"
+                input="email"
+                placeholder="Please Give us your email"
+                onChange={(e) => setEmail(e.target.value)}
+              ></input>
+            </div>
+            <button className="submit-button" onClick={submit}>
+              Submit
+            </button>
           </div>
         </div>
-        
       </div>
     </>
   );

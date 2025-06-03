@@ -218,11 +218,11 @@ outline: none;
 }
 
 .status{
-  background-color: red;
+  background-color: rgb(255, 53, 53);
   border-radius: 20px;
-  width: 30%;
+  width: 70%;
   font-size: 0.6em;
-  height: 25px;
+  height: 33px;
   display: flex;
   align-items: center;
   justify-content: center;
