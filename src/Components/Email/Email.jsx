@@ -25,33 +25,39 @@ const database = StartFirebase();
 const dbref = ref(database);
 
 export default function Chat({ auth }) {
-  const [dataa, setDatas] = useState([]);
+const [dataa, setDatas] = useState([]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const fetchData = async () => {
-        try {
-          get(child(dbref, `festalive/`))
-            .then((snapshot) => {
-              if (snapshot.exists()) {
-                const allposts = snapshot.val();
-                let instaposts = [];
-                snapshot.forEach((childSnapshot) => {
-                  let post = childSnapshot.val();
-                  instaposts.push(post);
-                });
-                setDatas(instaposts);
-              }
-            })
-            .catch((err) => console.error(err));
-        } catch (err) {
-          console.error(err);
-        }
-      };
-      fetchData();
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+useEffect(() => {
+  const interval = setInterval(() => {
+    const fetchData = async () => {
+      try {
+        get(child(dbref, `festalive/`))
+          .then((snapshot) => {
+            if (snapshot.exists()) {
+              const emailSet = new Set();
+              const uniquePosts = [];
+
+              snapshot.forEach((childSnapshot) => {
+                const post = childSnapshot.val();
+                if (post.email && !emailSet.has(post.email)) {
+                  emailSet.add(post.email);
+                  uniquePosts.push(post);
+                }
+              });
+
+              setDatas(uniquePosts);
+            }
+          })
+          .catch((err) => console.error(err));
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchData();
+  }, 1000);
+
+  return () => clearInterval(interval);
+}, []);
 
   // Function to export data to Excel
   const exportToExcel = () => {
